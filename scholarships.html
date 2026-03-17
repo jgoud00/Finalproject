@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse all available student scholarships. Filter by category or search by name.">
+  <title>Scholarships — ScholarPath</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="scholarships">
+
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="nav-logo">🎓 ScholarPath</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"        class="nav-link">Home</a></li>
+      <li><a href="scholarships.html" class="nav-link">Scholarships</a></li>
+      <li><a href="calculator.html"   class="nav-link">Eligibility</a></li>
+      <li><a href="profile.html"      class="nav-link">Profile</a></li>
+      <li><button id="darkBtn" aria-label="Toggle dark mode">☾ Dark</button></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Scholarships</h1>
+    <p>Browse all available awards. Filter by category or search by name.</p>
+  </div>
+</div>
+
+<main class="section">
+  <div class="container">
+
+    <div class="toolbar">
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input type="search" id="search" placeholder="Search scholarships…" aria-label="Search scholarships">
+      </div>
+      <select id="filter" class="filter-sel" aria-label="Filter by category">
+        <option value="all">All Categories</option>
+        <option value="merit">🏆 Merit</option>
+        <option value="need">💰 Need-based</option>
+        <option value="sports">⚽ Sports</option>
+        <option value="minority">🌸 Minority</option>
+      </select>
+      <span id="count" aria-live="polite"></span>
+    </div>
+
+    <div class="cards-grid" id="grid" role="list">
+
+      <article class="card" role="listitem" data-cat="merit">
+        <div class="card-top">
+          <span class="badge badge-merit">🏆 Merit</span>
+          <span class="status open">● Open</span>
+        </div>
+        <div class="card-name">National Merit Excellence Award</div>
+        <div class="card-desc">Awarded to students who demonstrate outstanding academic performance across all streams.</div>
+        <div class="card-foot">
+          <span class="amount">₹75,000 / yr</span>
+          <span class="deadline">⏳ 30 Jun 2025</span>
+        </div>
+        <div class="elig-note">📋 Min 85% marks, family income ≤ ₹6 LPA</div>
+      </article>
+
+      <article class="card" role="listitem" data-cat="need">
+        <div class="card-top">
+          <span class="badge badge-need">💰 Need-based</span>
+          <span class="status open">● Open</span>
+        </div>
+        <div class="card-name">Central Sector Scheme for Scholarships</div>
+        <div class="card-desc">Government-funded scheme for college and university students from economically weaker sections.</div>
+        <div class="card-foot">
+          <span class="amount">₹20,000 / yr</span>
+          <span class="deadline">⏳ 15 Jul 2025</span>
+        </div>
+        <div class="elig-note">📋 Min 80% marks, family income ≤ ₹4.5 LPA</div>
+      </article>
+
+      <article class="card" role="listitem" data-cat="minority">
+        <div class="card-top">
+          <span class="badge badge-minority">🌸 Minority</span>
+          <span class="status open">● Open</span>
+        </div>
+        <div class="card-name">Post-Matric Scholarship (SC/ST)</div>
+        <div class="card-desc">Financial assistance for SC/ST students pursuing post-matriculation education.</div>
+        <div class="card-foot">
+          <span class="amount">₹30,000 / yr</span>
+          <span class="deadline">⏳ 1 Aug 2025</span>
+        </div>
+        <div class="elig-note">📋 SC/ST category, family income ≤ ₹2.5 LPA</div>
+      </article>
+
+      <article class="card" role="listitem" data-cat="sports">
+        <div class="card-top">
+          <span class="badge badge-sports">⚽ Sports</span>
+          <span class="status open">● Open</span>
+        </div>
+        <div class="card-name">Sports Excellence Fellowship</div>
+        <div class="card-desc">For students who have represented their state or country at national level in any sport.</div>
+        <div class="card-foot">
+          <span class="amount">₹50,000 / yr</span>
+          <span class="deadline">⏳ 10 Sep 2025</span>
+        </div>
+        <div class="elig-note">📋 Min 60% marks, state/national level sports</div>
+      </article>
+
+      <article class="card" role="listitem" data-cat="merit">
+        <div class="card-top">
+          <span class="badge badge-merit">🏆 Merit</span>
+          <span class="status closed">● Closed</span>
+        </div>
+        <div class="card-name">Inspire Scholarship (SHE)</div>
+        <div class="card-desc">Science Humanities &amp; Engineering scholarship for top 1% students in Class XII board exams.</div>
+        <div class="card-foot">
+          <span class="amount">₹80,000 / yr</span>
+          <span class="deadline">⏳ 31 May 2025</span>
+        </div>
+        <div class="elig-note">📋 Min 90% marks, science stream, income ≤ ₹7 LPA</div>
+      </article>
+
+      <article class="card" role="listitem" data-cat="minority">
+        <div class="card-top">
+          <span class="badge badge-minority">🌸 Minority</span>
+          <span class="status open">● Open</span>
+        </div>
+        <div class="card-name">OBC Pre-Matric Scholarship</div>
+        <div class="card-desc">Support for OBC students to reduce dropout rates at pre-matric level.</div>
+        <div class="card-foot">
+          <span class="amount">₹15,000 / yr</span>
+          <span class="deadline">⏳ 20 Jul 2025</span>
+        </div>
+        <div class="elig-note">📋 OBC category, family income ≤ ₹3 LPA</div>
+      </article>
+
+      <article class="card" role="listitem" data-cat="need">
+        <div class="card-top">
+          <span class="badge badge-need">💰 Need-based</span>
+          <span class="status open">● Open</span>
+        </div>
+        <div class="card-name">Prime Minister's Special Scholarship</div>
+        <div class="card-desc">Targeted at students from J&amp;K and North-East regions pursuing professional courses.</div>
+        <div class="card-foot">
+          <span class="amount">₹60,000 / yr</span>
+          <span class="deadline">⏳ 25 Aug 2025</span>
+        </div>
+        <div class="elig-note">📋 Min 75% marks, family income ≤ ₹3.5 LPA</div>
+      </article>
+
+      <article class="card" role="listitem" data-cat="need">
+        <div class="card-top">
+          <span class="badge badge-need">💰 Need-based</span>
+          <span class="status open">● Open</span>
+        </div>
+        <div class="card-name">Pragati Scholarship for Girls</div>
+        <div class="card-desc">AICTE scholarship for girl students pursuing technical education in India.</div>
+        <div class="card-foot">
+          <span class="amount">₹50,000 / yr</span>
+          <span class="deadline">⏳ 15 Jun 2025</span>
+        </div>
+        <div class="elig-note">📋 Female, technical course, min 70% marks</div>
+      </article>
+
+    </div>
+
+    <p id="noResults" class="no-results" style="display:none;">No scholarships match your search. Try adjusting the filters.</p>
+
+    <div class="tbl-section">
+      <h2>Quick Reference Table</h2>
+      <p>A snapshot of all scholarships for easy comparison.</p>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Amount / yr</th>
+            <th>Min Marks</th>
+            <th>Max Income</th>
+            <th>Deadline</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>National Merit Excellence Award</td>
+            <td><span class="badge badge-merit">🏆 Merit</span></td>
+            <td class="amount">₹75,000</td>
+            <td>85%</td>
+            <td>₹6,00,000</td>
+            <td>30 Jun 2025</td>
+          </tr>
+          <tr>
+            <td>Central Sector Scheme</td>
+            <td><span class="badge badge-need">💰 Need-based</span></td>
+            <td class="amount">₹20,000</td>
+            <td>80%</td>
+            <td>₹4,50,000</td>
+            <td>15 Jul 2025</td>
+          </tr>
+          <tr>
+            <td>Post-Matric Scholarship (SC/ST)</td>
+            <td><span class="badge badge-minority">🌸 Minority</span></td>
+            <td class="amount">₹30,000</td>
+            <td>50%</td>
+            <td>₹2,50,000</td>
+            <td>1 Aug 2025</td>
+          </tr>
+          <tr>
+            <td>Sports Excellence Fellowship</td>
+            <td><span class="badge badge-sports">⚽ Sports</span></td>
+            <td class="amount">₹50,000</td>
+            <td>60%</td>
+            <td>₹8,00,000</td>
+            <td>10 Sep 2025</td>
+          </tr>
+          <tr>
+            <td>Inspire Scholarship (SHE)</td>
+            <td><span class="badge badge-merit">🏆 Merit</span></td>
+            <td class="amount">₹80,000</td>
+            <td>90%</td>
+            <td>₹7,00,000</td>
+            <td>31 May 2025</td>
+          </tr>
+          <tr>
+            <td>OBC Pre-Matric Scholarship</td>
+            <td><span class="badge badge-minority">🌸 Minority</span></td>
+            <td class="amount">₹15,000</td>
+            <td>45%</td>
+            <td>₹3,00,000</td>
+            <td>20 Jul 2025</td>
+          </tr>
+          <tr>
+            <td>PM Special Scholarship</td>
+            <td><span class="badge badge-need">💰 Need-based</span></td>
+            <td class="amount">₹60,000</td>
+            <td>75%</td>
+            <td>₹3,50,000</td>
+            <td>25 Aug 2025</td>
+          </tr>
+          <tr>
+            <td>Pragati Scholarship for Girls</td>
+            <td><span class="badge badge-need">💰 Need-based</span></td>
+            <td class="amount">₹50,000</td>
+            <td>70%</td>
+            <td>₹8,00,000</td>
+            <td>15 Jun 2025</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <strong>ScholarPath</strong> &nbsp;·&nbsp;
+  <a href="index.html">Home</a> &nbsp;·&nbsp;
+  <a href="calculator.html">Eligibility</a>
+</footer>
+
+<script type="module" src="app.js" defer></script>
+</body>
+</html>

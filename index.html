@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ScholarPath — Find scholarships based on your marks, income, and category.">
+  <meta name="keywords" content="scholarship, student scholarship, merit scholarship, India scholarships">
+  <meta name="author" content="ScholarPath Portal">
+  <title>ScholarPath — Student Scholarship Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="nav-logo">🎓 ScholarPath</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"        class="nav-link">Home</a></li>
+      <li><a href="scholarships.html" class="nav-link">Scholarships</a></li>
+      <li><a href="calculator.html"   class="nav-link">Eligibility</a></li>
+      <li><a href="profile.html"      class="nav-link">Profile</a></li>
+      <li><button id="darkBtn" aria-label="Toggle dark mode">☾ Dark</button></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <span class="hero-label">Free · No sign-up needed to browse</span>
+      <h1>Find the Right Scholarship for You</h1>
+      <p>ScholarPath lists merit, need-based, sports, and minority scholarships. Check eligibility instantly and apply before the deadline.</p>
+      <div class="hero-btns">
+        <a href="scholarships.html" class="btn btn-primary">Explore Scholarships</a>
+        <a href="calculator.html"   class="btn btn-outline">Check Eligibility</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img
+              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=700&q=80"
+              alt="Students studying together"
+              loading="lazy"
+              width="700"
+              height="260"
+      >
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="container stats-inner">
+    <div class="stat"><div class="stat-n">8+</div><div class="stat-l">Scholarships</div></div>
+    <div class="stat"><div class="stat-n">₹80K</div><div class="stat-l">Max Award / yr</div></div>
+    <div class="stat"><div class="stat-n">4</div><div class="stat-l">Categories</div></div>
+    <div class="stat"><div class="stat-n">Free</div><div class="stat-l">Always</div></div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:3px;">How It Works</h2>
+    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:18px;">Four simple steps from discovery to application.</p>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-icon">🔍</div>
+        <h4>Browse</h4>
+        <p>Explore all scholarships and filter by category or keyword.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-icon">🧮</div>
+        <h4>Check Eligibility</h4>
+        <p>Enter your marks and income to see which scholarships you qualify for.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-icon">📋</div>
+        <h4>Note Deadlines</h4>
+        <p>Keep track of last dates so you never miss an application window.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-icon">📬</div>
+        <h4>Apply</h4>
+        <p>Visit the official scholarship page and submit your documents on time.</p>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <h4>⚙ Client-Server Model — How Websites Work</h4>
+      <p>
+        Your browser is the <strong>client</strong> — it requests pages and displays them.
+        In a real portal, the browser sends your data to a <strong>server</strong> that queries a <strong>database</strong> and returns matching scholarships.
+        In this demo everything runs in your browser — data is hard-coded in <code>data.js</code> and logic runs in <code>app.js</code>.
+        <br><br>
+        📡 In real applications, scholarship data is fetched from remote APIs over the internet.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <strong>ScholarPath</strong> &nbsp;·&nbsp;
+  <a href="scholarships.html">Scholarships</a> &nbsp;·&nbsp;
+  <a href="calculator.html">Eligibility</a> &nbsp;·&nbsp;
+  Built with HTML, CSS &amp; JavaScript
+</footer>
+
+<script type="module" src="app.js" defer></script>
+</body>
+</html>

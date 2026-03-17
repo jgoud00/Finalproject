@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Check your scholarship eligibility. Enter your marks, income, and category to see matching scholarships.">
+  <title>Eligibility Checker — ScholarPath</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="calculator">
+
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="nav-logo">🎓 ScholarPath</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"        class="nav-link">Home</a></li>
+      <li><a href="scholarships.html" class="nav-link">Scholarships</a></li>
+      <li><a href="calculator.html"   class="nav-link">Eligibility</a></li>
+      <li><a href="profile.html"      class="nav-link">Profile</a></li>
+      <li><button id="darkBtn" aria-label="Toggle dark mode">☾ Dark</button></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Eligibility Checker</h1>
+    <p>Enter your details to find scholarships you may qualify for.</p>
+  </div>
+</div>
+
+<main class="section">
+  <div class="container">
+    <div class="calc-wrap">
+
+      <div>
+        <div class="calc-card">
+          <h2>Check Your Eligibility</h2>
+          <form id="eligForm" novalidate>
+
+            <div class="form-group">
+              <label for="marks">Class XII Marks (%)</label>
+              <input type="number" id="marks" min="0" max="100" step="0.1" placeholder="e.g. 87.5" required aria-required="true" aria-describedby="marksErr">
+              <p class="err-msg" id="marksErr" role="alert"></p>
+              <p class="form-hint">Enter your percentage between 0 and 100</p>
+            </div>
+
+            <div class="form-group">
+              <label for="income">Annual Family Income (₹)</label>
+              <input type="number" id="income" min="0" step="10000" placeholder="e.g. 450000" required aria-required="true" aria-describedby="incomeErr">
+              <p class="err-msg" id="incomeErr" role="alert"></p>
+              <p class="form-hint">Total household income per year in rupees</p>
+            </div>
+
+            <div class="form-group">
+              <label for="catSel">Category</label>
+              <select id="catSel" aria-required="true">
+                <option value="general">General</option>
+                <option value="obc">OBC</option>
+                <option value="sc">SC</option>
+                <option value="st">ST</option>
+                <option value="ews">EWS</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="course">Course / Stream</label>
+              <select id="course">
+                <option value="science">Science (B.Sc / B.Tech)</option>
+                <option value="arts">Arts / Humanities</option>
+                <option value="commerce">Commerce (B.Com / BBA)</option>
+                <option value="medicine">Medicine (MBBS / BDS)</option>
+                <option value="law">Law (LLB)</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;" aria-label="Find eligible scholarships">
+              Find Eligible Scholarships
+            </button>
+
+          </form>
+        </div>
+
+        <div id="results" class="results-box" aria-live="polite"></div>
+      </div>
+
+      <div class="tips-card">
+        <h3>Eligibility Tips</h3>
+        <ul class="tips-list">
+          <li><span>🏆</span><span><strong>Merit</strong> — Requires min 80–90% marks.</span></li>
+          <li><span>💰</span><span><strong>Need-based</strong> — Family income below ₹3–6 LPA.</span></li>
+          <li><span>🌸</span><span><strong>SC/ST/OBC</strong> — Available with lower income limits.</span></li>
+          <li><span>⚽</span><span><strong>Sports</strong> — State or national-level participation needed.</span></li>
+          <li><span>📅</span><span>Apply before the deadline — late applications are not accepted.</span></li>
+          <li><span>📄</span><span>Keep income certificate and marksheet ready before applying.</span></li>
+        </ul>
+        <div class="disclaimer">
+          ⚠ This tool gives an approximate indication only. Always verify eligibility on the official scholarship website before applying.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <strong>ScholarPath</strong> &nbsp;·&nbsp;
+  <a href="index.html">Home</a> &nbsp;·&nbsp;
+  <a href="scholarships.html">Scholarships</a>
+</footer>
+
+<script type="module" src="app.js" defer></script>
+</body>
+</html>
